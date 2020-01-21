@@ -49,7 +49,7 @@
 # first_name = "john"
 
 
-############################################### WORKING WITH STRING PART 1 ###################################################
+############################################### WORKING WITH STRING PART 2 ###################################################
 
 # p "What is your first name?"
 # first_name = gets.chomp # I get asked what my what my first name is and allows to save the input, only works with strings 
@@ -124,6 +124,93 @@
 
 ############################################### METHODS ###################################################
 
+# def multiply(first_num, second_num)
+#   first_num.to_f * second_num.to_f #return is implied
+# end
+
+# def modulus(first_num, second_num)
+#   first_num.to_f % second_num.to_f
+# end
+
+# def subtract(first_num, second_num)
+#   first_num.to_f - second_num.to_f
+# end
+
+# p "Simple Calculator"
+# 25.times { print "-" } #print does not create a new line, as opposed to p which does 
+# puts
+# p "Enter the first number"
+# num_1 = gets.chomp
+# p "Enter the second number"
+# num_2 = gets.chomp
+# p "The first number multiplied by the second number is #{multiply(num_1,num_2)}"
+# p "The remainder of the first number divided by the second number is #{modulus(num_1,num_2)}"
+# p "The first number subtacted by the second number is #{subtract(num_1,num_2)}"
+
+
+############################################### IF/ELSE IF ###################################################
+
+# if/else 
+if true 
+# execute some code 
+else 
+# execute some other code 
+end   
+
+# if/else 
+if !true 
+  p "Hello"
+else 
+  p "Bye"
+end   
+  p "la la la"
+
+condition = true 
+another_condition = true 
+if condition && another_condition #checking to see if both conditions with &&
+  p "Hello"
+else 
+  p "Bye"
+end   
+  p "la la la"
+
+condition = true 
+another_condition = false
+if condition && another_condition #checking to see if both conditions with AND &&
+  p "Hello"
+else 
+  p "Bye"
+end   
+  p "la la la"
+
+condition = true 
+another_condition = false
+if condition || another_condition #checking to see if any condition is true with the OR ||
+  p "Hello"
+else 
+  p "Bye"
+end   
+  p "la la la"
+
+condition = false
+another_condition = false
+if !condition || !another_condition #checking to see if any condition is true with the OR ||
+  p "This condition is true"
+else 
+  p "This condition is false"
+end   
+  p "la la la"
+
+name = "Eder"
+if name === "Eder"
+  p "Welcome to the program, Eder"
+elsif name === "Jack"
+  p "Welcome to the program, Jack"
+else 
+  p"Welcome to the program, User"
+end
+
+
 def multiply(first_num, second_num)
   first_num.to_f * second_num.to_f #return is implied
 end
@@ -143,6 +230,22 @@ p "Enter the first number"
 num_1 = gets.chomp
 p "Enter the second number"
 num_2 = gets.chomp
-p "The first number multiplied by the second number is #{multiply(num_1,num_2)}"
-p "The remainder of the first number divided by the second number is #{modulus(num_1,num_2)}"
-p "The first number subtacted by the second number is #{subtract(num_1,num_2)}"
+p "What do you want to do?"
+input = gets.chomp 
+if input == "multiply"
+  multiply(num_1,num_2)
+  p "The first number multiplied by the second number is #{multiply(num_1,num_2)}"
+elsif input == "modulus" 
+  modulus(num_1,num_2)
+  p "The remainder of the first number divided by the second number is #{modulus(num_1,num_2)}"
+elsif input == "subtract" 
+  subtract(num_1,num_2)
+  p "The first number subtacted by the second number is #{subtract(num_1,num_2)}"
+else 
+  p "invalid entry"
+end 
+  
+
+
+
+
