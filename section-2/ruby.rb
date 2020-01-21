@@ -112,11 +112,37 @@
 # > less than or equal to
 # < greater than or equal to
 
-p 10 == 10 #true 
-p 10 == 9 #false 
-p 10 == "10".to_i #true
-p 10 != 9 # true 
-p "hello" != "bye" #true
-p 100 >= 100 #true 
+# p 10 == 10 #true 
+# p 10 == 9 #false 
+# p 10 == "10".to_i #true
+# p 10 != 9 # true 
+# p "hello" != "bye" #true
+# p 100 >= 100 #true 
 
-p 10.eql?(10.0) #false, because this method is comparing the types 
+# p 10.eql?(10.0) #false, because this method is comparing the types 
+
+
+############################################### METHODS ###################################################
+
+def multiply(first_num, second_num)
+  first_num.to_f * second_num.to_f #return is implied
+end
+
+def modulus(first_num, second_num)
+  first_num.to_f % second_num.to_f
+end
+
+def subtract(first_num, second_num)
+  first_num.to_f - second_num.to_f
+end
+
+p "Simple Calculator"
+25.times { print "-" } #print does not create a new line, as opposed to p which does 
+puts
+p "Enter the first number"
+num_1 = gets.chomp
+p "Enter the second number"
+num_2 = gets.chomp
+p "The first number multiplied by the second number is #{multiply(num_1,num_2)}"
+p "The remainder of the first number divided by the second number is #{modulus(num_1,num_2)}"
+p "The first number subtacted by the second number is #{subtract(num_1,num_2)}"
