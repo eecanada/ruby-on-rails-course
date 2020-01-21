@@ -248,68 +248,88 @@
 
 ############################################### ARRAYS AND ITERATORS ###################################################
 
-a = [1,2,3,4,5,6,7,8,9]
-puts a #line by line
-p a #one line in array
-print a #one line in array w/o break 
-p a.last #last index of an array
+# a = [1,2,3,4,5,6,7,8,9]
+# puts a #line by line
+# p a #one line in array
+# print a #one line in array w/o break 
+# p a.last #last index of an array
 
-x = 1..100
-p x.class #range 
-p x.to_a #converts the range to an array
-p x.to_a.shuffle #converts the range to an array and shuffles it, chnages one method tto another 
-z = x.to_a.shuffle! #the above ^ shuffle is not saved onto the z variable 
-p z 
+# x = 1..100
+# p x.class #range 
+# p x.to_a #converts the range to an array
+# p x.to_a.shuffle #converts the range to an array and shuffles it, chnages one method tto another 
+# z = x.to_a.shuffle! #the above ^ shuffle is not saved onto the z variable 
+# p z 
 
-x = (1..10).to_a #converts the range to an array
-p x
-p x.reverse #reverses the index of the array 
+# x = (1..10).to_a #converts the range to an array
+# p x
+# p x.reverse #reverses the index of the array 
 
-x = "a".."z"
-p x.to_a #turns the range into an array
-p x.to_a.shuffle #shuffle my array
-p x.to_a.shuffle.length #get the length of an array 
+# x = "a".."z"
+# p x.to_a #turns the range into an array
+# p x.to_a.shuffle #shuffle my array
+# p x.to_a.shuffle.length #get the length of an array 
 
-a = [1,2,3,4,5,6,7,8,9]
-a << 10 #adds number to end of the array
-a.last #gives me the last element of the array 
-a.first #gives me the first element of the array
-a.unshift("Eder") #adds to the first element of the array
-p a.append("Eder") #adds to the last element of the array
-p a.push("Eder") #adds to the last element of the array
-p a.uniq! #remove the duplicates from the array 
+# a = [1,2,3,4,5,6,7,8,9]
+# a << 10 #adds number to end of the array
+# a.last #gives me the last element of the array 
+# a.first #gives me the first element of the array
+# a.unshift("Eder") #adds to the first element of the array
+# p a.append("Eder") #adds to the last element of the array
+# p a.push("Eder") #adds to the last element of the array
+# p a.uniq! #remove the duplicates from the array 
 
-p a.empty? #false, with empty? I check if an array is empty or not
-b = []
-p b.empty? # true 
-p a.include?("Eder") # .include?() checks if what I pass through it, is in the array 
-b = a.pop #pop removes the last element of the array, and I am storing that element in the b variable 
-p b 
+# p a.empty? #false, with empty? I check if an array is empty or not
+# b = []
+# p b.empty? # true 
+# p a.include?("Eder") # .include?() checks if what I pass through it, is in the array 
+# b = a.pop #pop removes the last element of the array, and I am storing that element in the b variable 
+# p b 
 
-a.join #joins the array into one string 
-p a.join("-")#joins the array into one string(index), with a - inbetween each index "Eder-1-2-3-4-5-6-7-8-9"
-b = a.join("-")
-p b.split #["Eder-1-2-3-4-5-6-7-8-9"]
-p b.split("-") #["Eder", "1", "2", "3", "4", "5", "6", "7", "8", "9"] splits the joined array by "-", into seperate indexes 
+# a.join #joins the array into one string 
+# p a.join("-")#joins the array into one string(index), with a - inbetween each index "Eder-1-2-3-4-5-6-7-8-9"
+# b = a.join("-")
+# p b.split #["Eder-1-2-3-4-5-6-7-8-9"]
+# p b.split("-") #["Eder", "1", "2", "3", "4", "5", "6", "7", "8", "9"] splits the joined array by "-", into seperate indexes 
 
-z = %w(my name is Eder and ruby is a great and fun language) #turns whatever I wrote using %w() into an array 
+# z = %w(my name is Eder and ruby is a great and fun language) #turns whatever I wrote using %w() into an array 
 
-#iterates though the z array
-for i in z
-  p i
-end 
+# #iterates though the z array
+# for i in z
+#   p i
+# end 
 
-#another way of iterating through the z array using the each method 
-z.each do |i|
-  p i 
-end
+# #another way of iterating through the z array using the each method 
+# z.each do |i|
+#   p i 
+# end
 
-# another way of iterating through an array using the block method 
-z.each{|food|p food}
+# # another way of iterating through an array using the block method 
+# z.each{|food|p food}
 
-z = (1..100).to_a.shuffle
+# z = (1..100).to_a.shuffle
 
-#the select operator works on booleans
-p z.select{|number| number.odd?} #this loops through my random array of 100, and logs only the odd numnbers.
+# #the select operator works on booleans
+# p z.select{|number| number.odd?} #this loops through my random array of 100, and logs only the odd numnbers.
 
-p a.methods #methods I can use for array 
+# p a.methods #methods I can use for array 
+
+
+############################################### HASHES ###################################################
+
+# hash(datatype) aka dictionary aka objects 
+my_details = {"name" => "eder", "job" => "full-stack developer", "hobby" => "travel"}
+p my_details["name"] #eder
+p my_details.class 
+p my_details.keys #able to view all keys in the hash as an array
+p my_details.values #able to view all values in the hash as an array 
+my_details.values.each{|values| p values} # after I get the array and I loop throught it 
+
+#creating another hash, but this time with SYMBOLS 
+another_hash = {a:1,b:2,c:3}
+p another_hash
+p another_hash[:a]
+another_hash[:e] = "eder" #adding a key and value to my hash
+another_hash[:c] = "ruby" #change the value of C from 3 to "ruby"
+p another_hash.select{|k,v|v.is_a?(String)} #iterate through the hash and select only values with a key of String 
+p another_hash.each {|k,v| another_hash.delete(k) if v.is_a?(String)} #this loops the hash values and deletes any that have a string for a key
