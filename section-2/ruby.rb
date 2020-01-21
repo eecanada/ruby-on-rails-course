@@ -1,4 +1,4 @@
-############################################################INTRODUCTION#######################################
+############################################################ INTRODUCTION #######################################
 
 # print "Hello World" #does not give me a new line 
 # puts "Hello World" #acts as a return 
@@ -20,7 +20,7 @@
 # say_hello("I am a Ruby code master") #calling the method  
 
 
-###############################################WORKING WITH STRING PART 1 ###################################################
+############################################### WORKING WITH STRING PART 1 ###################################################
 
 # #string concatination
 # first_name = "eder"
@@ -49,7 +49,7 @@
 # first_name = "john"
 
 
-###############################################WORKING WITH STRING PART 1 ###################################################
+############################################### WORKING WITH STRING PART 1 ###################################################
 
 # p "What is your first name?"
 # first_name = gets.chomp # I get asked what my what my first name is and allows to save the input, only works with strings 
@@ -71,36 +71,52 @@
 # p "Your name has #{full_name.delete(" ").length} character"
 
 
-###############################################WORKING WITH NUMBERS ###################################################
+############################################### WORKING WITH NUMBERS ###################################################
 
-p 1 + 2
-p 2 * 4 
-p 10 / 4 #--> 2 drops the decimal so equals 
-p 10.0 / 4 #--> 2.5 have to turn one of the numbers into a float for division to work or 10/4.0
-p 10 / 4.to_f #--> 2.5
-x = 5
-y = 10
-p x + y #--> 15
+# p 1 + 2
+# p 2 * 4 
+# p 10 / 4 #--> 2 drops the decimal so equals 
+# p 10.0 / 4 #--> 2.5 have to turn one of the numbers into a float for division to work or 10/4.0
+# p 10 / 4.to_f #--> 2.5
+# x = 5
+# y = 10
+# p x + y #--> 15
 
-p "I am a line"
-p "-" * 20 # I can mupilty the string and a number, but I can do 20 * "-" since an number cannot be multiplied by "-"
-p "I am a different line after the divider"
+# p "I am a line"
+# p "-" * 20 # I can mupilty the string and a number, but I can do 20 * "-" since an number cannot be multiplied by "-"
+# p "I am a different line after the divider"
 
-20.times {p "hi"} #--> logs out hi 20 times. A method that allows me to do something x ammount of times
-20.times {p rand(10)} #--> logs out random number between 0 and 9, 20 times
+# 20.times {p "hi"} #--> logs out hi 20 times. A method that allows me to do something x ammount of times
+# 20.times {p rand(10)} #--> logs out random number between 0 and 9, 20 times
 
-p x.to_f #-->5.0
-p "hello".to_f #--> 0, cannot convert string to a float, so it returns a 0
+# p x.to_f #-->5.0
+# p "hello".to_f #--> 0, cannot convert string to a float, so it returns a 0
 
-p "Simple Calculator"
-25.times { print "-" } #print does not create a new line, as opposed to p which does 
-puts
-p "Enter the first number"
-num_1 = gets.chomp
-p "Enter the second number"
-num_2 = gets.chomp
-p "The first number multiplied by the second number is #{num_1.to_i * num_2.to_i}"
-p "The remainder of the first number divided by the second number is #{num_1.to_i % num_2.to_i}"
+# p "Simple Calculator"
+# 25.times { print "-" } #print does not create a new line, as opposed to p which does 
+# puts
+# p "Enter the first number"
+# num_1 = gets.chomp
+# p "Enter the second number"
+# num_2 = gets.chomp
+# p "The first number multiplied by the second number is #{num_1.to_i * num_2.to_i}"
+# p "The remainder of the first number divided by the second number is #{num_1.to_i % num_2.to_i}"
 
-p 19 % 4 # --> 3, leave the reminder of the division 
+# p 19 % 4 # --> 3, leave the reminder of the division 
 
+
+############################################### COMPARISON OPERATORS ###################################################
+
+# == check comparison
+# != not equal to
+# > less than or equal to
+# < greater than or equal to
+
+p 10 == 10 #true 
+p 10 == 9 #false 
+p 10 == "10".to_i #true
+p 10 != 9 # true 
+p "hello" != "bye" #true
+p 100 >= 100 #true 
+
+p 10.eql?(10.0) #false, because this method is comparing the types 
